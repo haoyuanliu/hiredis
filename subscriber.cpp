@@ -10,7 +10,7 @@ void recieve_message(const char *channel_name,
 int main(int argc, char *argv[])
 {
     CRedisSubscriber subscriber;
-    CRedisSubscriber::NotifyMessageFn fn = 
+    CRedisSubscriber::NotifyMessageFn fn =
         bind(recieve_message, std::tr1::placeholders::_1,
         std::tr1::placeholders::_2, std::tr1::placeholders::_3);
 
@@ -28,7 +28,7 @@ int main(int argc, char *argv[])
         return 0;
     }
 
-    subscriber.subscribe("test-channel");
+    subscriber.subscribe("date");
 
     while (true)
     {

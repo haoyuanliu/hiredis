@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
 
     while (true)
     {
-        publisher.publish("date", TimeStamp::now().toString());
+        publisher.publish("date", TimeStamp::now().toFormattedString());
         sleep(1);
     }
 
